@@ -9,8 +9,8 @@ import { useState } from 'react';
 const App = () => {
   const [currentNumber, setCurrentNumber] = useState('0');
 
-  const handleAddNumber = (number) => {
-    setCurrentNumber{prev => '${number}${prev}'}
+  const handleAddNumber = (num) => {
+    setCurrentNumber(prev => `${num}${prev}`)
   }
   return (
     <Container>
@@ -25,9 +25,9 @@ const App = () => {
         </Row>
 
         <Row>
-          <Button label="7" onClick={() => handleAddNumber('')}/>
-          <Button label="8" onClick={() => handleAddNumber('')}/>
-          <Button label="9" onClick={() => handleAddNumber('')}/>
+          <Button label="7" onClick={() => handleAddNumber('7')}/>
+          <Button label="8" onClick={() => handleAddNumber('8')}/>
+          <Button label="9" onClick={() => handleAddNumber('9')}/>
           <Button label="-" onClick={() => handleAddNumber('')}/>
         </Row>
 
