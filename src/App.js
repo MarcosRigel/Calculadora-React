@@ -41,6 +41,7 @@ const App = () => {
       setCurrentNumber('0');
       setOperation('-')
     } else {
+      console.log('minus')
       const sum = Number(firstNumber) - Number(currentNumber);
       setCurrentNumber(String(sum))
       setOperation('')
@@ -71,15 +72,15 @@ const App = () => {
         <Row>
           <Button label="x"/>
           <Button label="/"/>
-          <Button label="C" onClick={handleOnClear}/>
-          <Button label="L"/>
+          <Button label="c" onClick={handleOnClear}/>
+          <Button label="DEL"/>
         </Row>
 
         <Row>
           <Button label="7" onClick={() => handleAddNumber('7')}/>
           <Button label="8" onClick={() => handleAddNumber('8')}/>
           <Button label="9" onClick={() => handleAddNumber('9')}/>
-          <Button label="-" onClick={() => handleAddNumber('')}/>
+          <Button label="-" onClick={handleMinusNumbers}/>
         </Row>
 
         <Row>
